@@ -1,0 +1,29 @@
+{
+  "name": "parchis",
+  "homepage": "https://github.com/rafelsanso/parchis-html5",
+  "authors": [
+    "rafelsanso <rafel.sanso@gmail.com>"
+  ],
+  "description": "game dependencies",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "parchis",
+    "canvas",
+    "html5",
+    "phaser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "phaser": "^2.4.7",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.3"
+  }
+}

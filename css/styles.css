@@ -1,0 +1,23 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: #00b8ec;
+	background-image:url('../img/background.jpg');
+	background-repeat: repeat-x;
+	background-position: bottom center;
+}
+
+canvas {
+	margin: 0 auto;
+}
+
+#game {
+	margin: 40px 0;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+}
