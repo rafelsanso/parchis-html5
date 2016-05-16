@@ -138,7 +138,7 @@ boardSpecial['yellow'][2] = [510, 570, false];
 boardSpecial['yellow'][3] = [480, 570, false];
 
 function create() {
-    // Board
+	// Board
     board = game.add.sprite(game.width, game.height, 'board');
     board.anchor.set(1, 1);
 
@@ -358,12 +358,20 @@ function movePlayer(player, result) {
 
 		players['red'] = oldPosition + result;
 
+		if (players['red'] > 68) {
+			players['red'] = players['red'] - 68;
+		}
+
 	} else if (player == 'yellow') {
 		oldPosition = players['yellow'];
 
 		playerAnimation (yellow01, players['yellow'], result);
 
 		players['yellow'] = oldPosition + result;
+
+		if (players['yellow'] > 68) {
+			players['yellow'] = players['yellow'] - 68;
+		}
 	}
 }
 
@@ -376,8 +384,12 @@ function playerAnimation (item, position, movements) {
       }
       if (movements >= 0) {
          playerAnimation(item, position, movements);
-         item.x = boardSpaces[position][0];
-		 item.y = boardSpaces[position][1];
+         game.add.tween(item).to(
+         	{
+         		x : boardSpaces[position][0],
+         		y : boardSpaces[position][1]
+         	}
+         , 150, Phaser.Easing.Linear.None, true);
       }
-   }, 400);
+   }, 150);
 }
